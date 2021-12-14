@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URLCount</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="popup.js"></script>
+
+
+</head>
+<body style="background:lightgray">
+    <h3 style="margin-top: 5px; text-align: center;"><span class="badge badge-primary">YT Tools</span></h3>
+    <div id="main" style="background:lightgray;width: 300px; text-align: center;">
+
+        <label for="choice"><h4 style="margin-top: 5px;"><span class="badge badge-primary">Choose Summarization Technique:</span></h4></label>
+        <select name="choice" id="sum_choice">
+        <option value="sumy-lsa-sum">sumy-lsa-sum</option>
+        <option value="sumy-luhn-sum">sumy-luhn-sum</option>
+        <option value="sumy-text-rank-sum">sumy-text-rank-sum</option>
+        <option value="sumy-lex-rank-sum">sumy-lex-rank-sum</option>
+        <option value="sumy-klsum-rank-sum">sumy-klsum-rank-sum</option>
+        </select>
+        <br/>
+        <label for="percent"><h4 style="margin-top: 5px;"><span class="badge badge-primary">Percent:</span></h4></label>
+        <input type="number" id="percent" name="percent" min="0" max="100">
+        <br/><br/>
+        <div style = "text-align: center;">
+        <button class = "btn btn-success" style="display:block;margin:auto;margin-bottom:10px" id='getSummary'>Submit</button>
+        </div>
+        <h4 style="margin-top: 5px;"><span class="badge badge-primary">Summary Text</span></h4>
+        <p style="display:block" id='summary'></p>
+        <button class = "btn btn-success" style="display:block;margin:auto;margin-bottom:10px" id='getAnalysis'>Get Analysis</button>
+        <h4 style="margin-top: 5px;"><span class="badge badge-primary">Video Analysis</span></h4>
+        <p>Positive: </p><p id='positive'></p>
+        <p>Negative: </p><p id='negative'></p>
+    </div>
+</body>
+</html>
